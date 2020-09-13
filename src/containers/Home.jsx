@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import "../assets/styles/App.scss";
+import Header from "../components/Header";
 
 import Search from "../components/Search";
 import Categories from "../components/Categories";
@@ -12,6 +13,7 @@ import useInitialState from "../hooks/useInitialState";
 const Home = ({ mylist, trends, originals }) => {
   return (
     <>
+      <Header />
       <Search />
       {mylist.length > 0 && (
         <Categories title="Mi lista">
